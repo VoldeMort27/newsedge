@@ -388,10 +388,10 @@ nav{
 }
 
 .blog-text strong{
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #20232b;
     display: flex;
-    font-weight: 400;
+    font-weight: 800;
     margin: 10px 0px;
     line-height: 25px;
 }
@@ -897,10 +897,10 @@ nav{
 
 
 .blog-text strong{
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: #20232b;
     display: flex;
-    font-weight: 400;
+    font-weight: 800;
     margin: 10px 0px;
     line-height: 25px;
 }
@@ -909,7 +909,7 @@ nav{
     align-items: center;
 }
 .category-time span{
-    font-size: 0.8rem;
+    font-size: 1.2rem;
 }
 .blog-category{
     padding: 3px 6px;
@@ -937,7 +937,7 @@ nav{
 }
 .publisher-profile span{
     color: #6d7ca1;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     letter-spacing: 0.5px;
     font-weight: 500;
     margin-left: 10px;
@@ -1227,6 +1227,11 @@ p .important{
         width:80%;
         margin: auto;
     }
+    iframe{
+        display: flex;
+        width: 80%;
+        margin:auto;
+    }
     .side-ad{
         display: none;
     }
@@ -1234,6 +1239,10 @@ p .important{
 @media(max-width:1000px){
     #blog-artcile{
         width:90%;
+    }
+    iframe{
+        width: 90%;
+        min-height: auto;
     }
     .article-img{
         max-height: auto;
@@ -1244,6 +1253,11 @@ p .important{
     #blog-artcile{
         width:100%;
         padding: 0px 10px;
+    }
+    iframe{
+        width: 100%;
+        padding: 0px 10px;
+        height:350px;
     }
     .article-container{
         padding: 20px 10px;
@@ -1409,6 +1423,71 @@ p .important{
         font-size: 1.58rem;
     }
 }
+
+.wiggle-btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: wiggle 2s linear infinite;
+    transform-origin: 50% 8em;
+    animation-delay: 1s;
+}
+
+.wiggle-btn:hover{
+    animation: none;
+}
+
+@keyframes wiggle{
+    0%,
+    5%{
+        transform: rotateZ(0);
+    }    
+    15%{
+        transform: rotateZ(-15deg);
+    }
+    20%{
+        transform: rotateZ(10deg);
+    }
+    25%{
+        transform: rotateZ(-10deg);
+    }
+    30%{
+        transform: rotateZ(6deg);
+    }
+
+    35%{
+        transform: rotateZ(-4deg);
+    }
+    40%,
+    100%{
+        transform: rotateZ(0);
+    }
+}
+
+.wiggle-btn:before{
+    z-index: 000;
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    box-shadow: 0 5px 25px rgba(2, 2, 2, 0.5);
+}
+
+.wiggle-btn span{
+    z-index: 222;
+    position: absolute;
+    color: #da2e2e;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 5px 25px rgba(2, 2, 2, 1);
+}
+
+
+      
 
 
 
